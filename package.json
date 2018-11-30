@@ -11,7 +11,7 @@
     "coverage": "nyc mocha --require @babel/register test/**/*",
     "noThemeWatch": "concurrently \"npm run watch\"",
     "format": "prettier --write \"./**/*.ts\" \"./**/*.js\" \"./**/*.scss\"",
-    "prepublish": "npx shx cp ./package.json ./package-example.json && mkdir copies && cp .* copies",
+    "prepublish": "npx shx cp ./package.json ./package-example.json && cp .babelrc __example.babelrc && cp .prettierrc __example.prettierrc",
     "build": "webpack --mode=production && npx bms-theme-kit -c"
   },
   "nyc": {

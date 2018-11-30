@@ -18,3 +18,4 @@ config.*.yml
 *.cache*
 src/dist/*
 src/package-lock.json
+package-example.json
