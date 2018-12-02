@@ -3,9 +3,8 @@ const path = require('path');
 module.exports = {
   watch: true,
   entry: {
+    // BMSPolyfills: './polyfills/polyfills.js', // IF YOU REQUIRE POLYFILLS, uncomment and gt file location for more information
     BMS_Preact_Hello_World: './builds/BMS_Preact_Hello_World.js'
-    //BMS_polyfills: './builds/BMS_polyfills.js',
-    //BMS_dependencies: './builds/BMS_dependencies.js',
   },
   module: {
     rules: [
