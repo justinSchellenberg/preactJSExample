@@ -1,7 +1,24 @@
-{
-  "presets": [
-    "@babel/preset-env"
-  ],
+const isDebug = process.env.NODE_ENV !== 'production';
+
+let presets = [
+  "@babel/preset-env"
+];
+
+if(isDebug) {
+  presets = [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "69"
+        }
+      }
+    ]
+  ];
+}
+
+module.exports = {
+  "presets": presets,
   "plugins": [
     [
       "@babel/plugin-proposal-object-rest-spread"
@@ -38,6 +55,6 @@
         "useESModules": false
       }
     ]
-    
+
   ]
 }
